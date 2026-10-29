@@ -40,12 +40,14 @@ h1{font-weight:400;line-height:.8}
 section{padding:clamp(54px,9vw,120px) var(--pad)}
 h2{font-family:Ahsing,serif;font-weight:400;font-size:clamp(46px,9vw,130px);line-height:.9}
 .lead{max-width:34ch;margin-top:18px}
-.tracks{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2.5vw,32px);margin-top:clamp(28px,5vw,60px)}
+.tracks{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2.5vw,32px);margin-top:clamp(28px,5vw,60px)}
 .card{position:relative;overflow:hidden;min-height:clamp(300px,36vw,460px);padding:clamp(22px,3vw,40px);border:2px solid rgba(255,255,255,.85);border-radius:34px;background:rgba(5,4,3,.55);backdrop-filter:blur(8px);display:flex;flex-direction:column;justify-content:flex-end}
 .card::before{content:"";position:absolute;width:90%;aspect-ratio:1;right:-30%;top:-30%;background:var(--heat);filter:blur(14px);opacity:.95;z-index:0}
 .card.b::before{left:-30%;right:auto;top:auto;bottom:-40%;transform:rotate(60deg)}
 .card>*{position:relative;z-index:1}
-.card h3{font-family:Ahsing,serif;font-weight:400;font-size:clamp(48px,8vw,110px);line-height:.9}
+.card h3{font-family:Ahsing,serif;font-weight:400;font-size:clamp(40px,4.8vw,84px);line-height:.9}
+.card.c::before{left:25%;right:auto;top:-45%;transform:rotate(-30deg)}
+@media(max-width:1000px){.tracks{grid-template-columns:1fr}.card{min-height:clamp(260px,50vw,380px)}.card h3{font-size:clamp(48px,11vw,96px)}}
 .card p{margin-top:12px;max-width:24ch}
 .dates{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(220px,1fr);gap:var(--pad);align-items:center}
 .big{font-family:Harlequin,serif;font-size:min(17vw,250px);line-height:.85;white-space:nowrap}
@@ -120,7 +122,7 @@ nav ul li:last-child a{border-bottom:0}
 <div class="cta"><a class="btn fill" href="#tracks">See the tracks<svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6"/></svg></a><a class="btn" href="#dates">Check the dates</a></div>
 </section>
 
-<div class="band" aria-hidden="true"><div><span>Build</span><i></i><span>Play</span><i></i><span>Break limits</span><i></i><span>Web</span><i></i><span>Game</span><i></i><span>In person</span><i></i><span>Free</span><i></i><span>Build</span><i></i><span>Play</span><i></i><span>Break limits</span><i></i><span>Web</span><i></i><span>Game</span><i></i><span>In person</span><i></i><span>Free</span><i></i></div></div>
+<div class="band" aria-hidden="true"><div><span>Build</span><i></i><span>Play</span><i></i><span>Break limits</span><i></i><span>Web</span><i></i><span>Game</span><i></i><span>Agentic AI</span><i></i><span>In person</span><i></i><span>Free</span><i></i><span>Build</span><i></i><span>Play</span><i></i><span>Break limits</span><i></i><span>Web</span><i></i><span>Game</span><i></i><span>Agentic AI</span><i></i><span>In person</span><i></i><span>Free</span><i></i></div></div>
 
 <section id="about" class="about" aria-labelledby="ah">
 <h2 id="ah" class="stmt" style="font-size:clamp(34px,5.6vw,80px);line-height:1">A weekend to make something you’re proud of.</h2>
@@ -129,10 +131,11 @@ nav ul li:last-child a{border-bottom:0}
 
 <section id="tracks" aria-labelledby="th">
 <h2 id="th">Pick your track</h2>
-<p class="lead">Two tracks, one weekend. Beginners are welcome in both.</p>
+<p class="lead">Three tracks, one weekend. Beginners are welcome in all of them.</p>
 <div class="tracks">
 <article class="card"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M9 14l-2 2 2 2M15 14l2 2-2 2"/></svg><h3>Web</h3><p>Create websites, web apps and digital solutions that tackle real problems or explore creative ideas.</p></article>
 <article class="card b"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="7" width="19" height="11" rx="5.5"/><path d="M7.5 10.5v4M5.5 12.5h4"/><circle cx="15.5" cy="11.5" r=".8"/><circle cx="18" cy="13.5" r=".8"/></svg><h3>Game</h3><p>Design and build games, interactive experiences and playful projects with the tools you choose.</p></article>
+<article class="card c"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="7" width="14" height="11" rx="3"/><path d="M12 7V4.5M9.5 12v1M14.5 12v1M9 16h6"/><circle cx="12" cy="3.6" r="1"/></svg><h3>Agentic AI</h3><p>Build AI agents that plan, use tools and take actions to get real tasks done.</p></article>
 </div>
 </section>
 
@@ -192,7 +195,7 @@ nav ul li:last-child a{border-bottom:0}
 <details><summary>Where does it happen?</summary><p>In person. The venue is still to be announced.</p></details>
 <details><summary>When is it?</summary><p>It is a two-day event on 5 and 6 December 2026, subject to confirmation of the organising team’s availability. Final schedules, rules, registration and judging details will be published once confirmed.</p></details>
 <details><summary>Who can take part?</summary><p>School and college students, including beginners.</p></details>
-<details><summary>What can I build?</summary><p>Choose one of two tracks: web development or game development.</p></details>
+<details><summary>What can I build?</summary><p>Choose one of three tracks: web development, game development or agentic AI.</p></details>
 <details><summary>Do I need a team?</summary><p>Yes. Each team has two to four participants.</p></details>
 <details><summary>Are there prizes, certificates or mentors?</summary><p>Digital certificates and other recognition will follow published eligibility criteria. Prizes, mentors and partnerships will be announced only when confirmed.</p></details>
 </div>
@@ -200,7 +203,7 @@ nav ul li:last-child a{border-bottom:0}
 
 <section class="final" aria-labelledby="fh2">
 <h2 id="fh2">See you on<br>December 5</h2>
-<p>We are aiming for 300 builders. The venue, registration details, rules and judging arrangements will be published once confirmed.</p>
+<p> The venue, registration details, rules and judging arrangements will be published once confirmed.</p>
 </section>
 </main>
 <footer><span class="mark">BashDelhi 2026</span><span>In-person hackathon, venue to be announced</span></footer>
