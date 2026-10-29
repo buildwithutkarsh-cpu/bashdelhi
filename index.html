@@ -95,9 +95,23 @@ details p{margin-top:12px;max-width:52ch}
 .fact .ico{margin:0 auto 6px;width:clamp(30px,4vw,48px);filter:drop-shadow(0 2px 8px rgba(0,0,0,.6))}
 .ico.s{display:inline-block;width:1em;margin:0 .35em -.12em 0}
 .btn svg{display:inline-block;width:1em;height:1em;margin-left:.4em;vertical-align:-.12em;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.burger{display:none;width:46px;height:46px;padding:0;border:2px solid var(--paper);border-radius:999px;background:transparent;color:var(--paper);cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.burger span{display:block;width:20px;height:2.5px;border-radius:2px;background:currentColor;transition:transform .25s,opacity .2s}
+nav.open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+nav.open .burger span:nth-child(2){opacity:0}
+nav.open .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+@media(max-width:760px){
+.burger{display:flex}
+nav ul{position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;padding:6px var(--pad) 22px;background:rgba(5,4,3,.95);backdrop-filter:blur(14px);border-bottom:2px solid rgba(255,255,255,.6);clip-path:inset(0 0 100% 0);visibility:hidden;transition:clip-path .3s ease,visibility .3s}
+nav.open ul{clip-path:inset(0);visibility:visible}
+nav ul a{padding:12px 0;border:0;border-bottom:2px solid rgba(255,255,255,.25);border-radius:0;font-family:Ahsing,serif;font-size:clamp(34px,10vw,52px);line-height:1}
+nav ul a:hover{background:transparent;color:var(--yellow)}
+nav ul li:last-child a{border-bottom:0}
+}
+@media(prefers-reduced-motion:reduce){nav ul,.burger span{transition:none}}
 </style></head><body>
 <div class="bg" aria-hidden="true"></div><div class="veil" aria-hidden="true"></div>
-<nav aria-label="Primary"><a class="mark" href="#top">BashDelhi</a><ul><li><a href="#about">About</a></li><li><a href="#tracks">Tracks</a></li><li><a href="#dates">Dates</a></li><li><a href="#faq">FAQ</a></li></ul></nav>
+<nav aria-label="Primary"><a class="mark" href="#top">BashDelhi</a><button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button><ul id="menu"><li><a href="#about">About</a></li><li><a href="#tracks">Tracks</a></li><li><a href="#dates">Dates</a></li><li><a href="#faq">FAQ</a></li></ul></nav>
 <main>
 <section class="hero" id="top">
 <h1 aria-label="BashDelhi 2026"><span class="bash" aria-hidden="true">BASH</span><span class="delhi" aria-hidden="true">DELHI</span><span class="year" aria-hidden="true">2026</span></h1>
@@ -190,4 +204,13 @@ details p{margin-top:12px;max-width:52ch}
 </section>
 </main>
 <footer><span class="mark">BashDelhi 2026</span><span>In-person hackathon, venue to be announced</span></footer>
+<script>
+(function(){var n=document.querySelector('nav'),b=n.querySelector('.burger');
+function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o)}
+b.addEventListener('click',function(){set(!n.classList.contains('open'))});
+n.querySelectorAll('ul a').forEach(function(a){a.addEventListener('click',function(){set(false)})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+matchMedia('(min-width:761px)').addEventListener('change',function(){set(false)});
+})();
+</script>
 </body></html>
