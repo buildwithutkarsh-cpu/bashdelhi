@@ -121,15 +121,19 @@ nav ul a.reg:hover{background:var(--yellow);border-color:var(--yellow);color:var
 footer a{text-decoration:underline}
 @media(max-width:760px){nav ul a.reg{background:transparent;color:var(--yellow)}}
 @media(prefers-reduced-motion:reduce){nav ul,.burger span{transition:none}}
+.footcta .reach{margin:34px auto 0;padding-top:26px;border-top:1px solid rgba(255,255,255,.35);max-width:640px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.footcta .reach .rl{font-size:.9em;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.footcta .reach a{font-family:Ahsing,serif;font-size:clamp(24px,4.6vw,40px);line-height:1.15;text-decoration:underline;text-underline-offset:.15em;word-break:break-word}
+.footcta .reach a:hover{color:var(--yellow)}
 </style></head><body>
 <div class="bg" aria-hidden="true"></div><div class="veil" aria-hidden="true"></div>
-<nav aria-label="Primary"><a class="mark" href="#top">BashDelhi</a><button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button><ul id="menu"><li><a href="#about">About</a></li><li><a href="#tracks">Tracks</a></li><li><a href="#dates">Dates</a></li><li><a href="#faq">FAQ</a></li><li><a class="reg" href="https://luma.com/v957h567" target="_blank" rel="noopener">Register</a></li></ul></nav>
+<nav aria-label="Primary"><a class="mark" href="#top">BashDelhi</a><button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button><ul id="menu"><li><a href="#about">About</a></li><li><a href="#tracks">Tracks</a></li><li><a href="#dates">Dates</a></li><li><a href="#faq">FAQ</a></li></ul></nav>
 <main>
 <section class="hero" id="top">
 <h1 aria-label="BashDelhi 2026"><span class="bash" aria-hidden="true">BASH</span><span class="delhi" aria-hidden="true">DELHI</span><span class="year" aria-hidden="true">2026</span></h1>
 <p class="tag">Build. Play. Break limits.</p>
 <p style="margin-top:8px;opacity:.9">A free in-person hackathon for school and college students</p>
-<div class="cta"><a class="btn fill" href="https://luma.com/v957h567" target="_blank" rel="noopener">Register now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn" href="#tracks">See the tracks<svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6"/></svg></a><a class="btn" href="#dates">Check the dates</a></div>
+<div class="cta"><a class="btn fill" href="https://luma.com/v957h567" target="_blank" rel="noopener">Register now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 </section>
 
 <div class="band" aria-hidden="true"><div><span>Build</span><i></i><span>Play</span><i></i><span>Break limits</span><i></i><span>Web</span><i></i><span>Game</span><i></i><span>Agentic AI</span><i></i><span>Hardware</span><i></i><span>In person</span><i></i><span>Free</span><i></i><span>Build</span><i></i><span>Play</span><i></i><span>Break limits</span><i></i><span>Web</span><i></i><span>Game</span><i></i><span>Agentic AI</span><i></i><span>Hardware</span><i></i><span>In person</span><i></i><span>Free</span><i></i></div></div>
@@ -213,13 +217,10 @@ footer a{text-decoration:underline}
 </div>
 </section>
 
-<section class="final" aria-labelledby="fh2">
-<h2 id="fh2">See you on<br>December 5</h2>
-<p>We are aiming for 300 builders. The venue, registration details, rules and judging arrangements will be published once confirmed.</p>
-</section>
 </main>
-<section class="footcta" aria-labelledby="fch"><h2 id="fch">Ready to build?</h2><p>Free to join. Teams of two to four. Grab your spot for 5 and 6 December.</p><a class="btn fill" href="https://luma.com/v957h567" target="_blank" rel="noopener">Register now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></section>
-<footer><span class="mark">BashDelhi 2026</span><span>In-person hackathon, venue to be announced</span><a href="https://luma.com/v957h567" target="_blank" rel="noopener">Register</a></footer>
+
+<section class="footcta" id="contact" aria-labelledby="fch"><h2 id="fch">Ready to build?</h2><p>Free to join. Teams of two to four. Grab your spot for 5 and 6 December.</p><a class="btn fill" href="https://luma.com/v957h567" target="_blank" rel="noopener">Register now<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><div class="reach"><span class="rl">Questions? Reach us</span><a href="mailto:ilovebashdelhi@gmail.com">ilovebashdelhi@gmail.com</a><a href="https://wa.me/918750955845" target="_blank" rel="noopener">WhatsApp +91 87509 55845</a></div></section>
+<footer><span class="mark">BashDelhi 2026</span><span>In-person hackathon, venue to be announced</span></footer>
 <script>
 if(/\/register\/?$/.test(location.pathname))location.replace("https://luma.com/v957h567");
 (function(){var n=document.querySelector('nav'),b=n.querySelector('.burger');
